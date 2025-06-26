@@ -1,0 +1,815 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Markazi+Text:wght@400..700&family=Mrs+Saint+Delafield&display=swap');
+
+.sitename-Lee {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 27px;
+  margin: 0;
+  color: var(--logo-heading)
+}
+
+.lobster-Lee {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-accent)
+}
+
+.markazi-Lee {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Open Sans",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors */
+:root {
+  --nav-heading-color: #ffffff; /* 메뉴 색상 */
+  --nav-hover-color: #ffb6b6; /* 메뉴 hover 색상 */
+  --nav-mobile-background-color: #F9F6FF; /* 모바일 메뉴의 배경색 */
+  --nav-dropdown-background-color: #F9F6FF; /* 드롭다운 메뉴의 배경색 */
+  --nav-dropdown-color: #8172a4; /* 드롭다운 메뉴 안의 글자 색상 */
+  --nav-dropdown-hover-color: #2d2158; /* 드롭다운 메뉴의 hover 색상 */
+}
+
+/* Font Colors */
+:root {
+  --text-heading: #593AAD; /* 메인 타이틀용 */
+  --text-subheading: #876FFF; /* 부제목, 설명 제목 등 */
+  --text-body: #FFCFAE; /* 일반적인 문단 글 */
+  --text-muted: #bfb8d9; /* 서브 텍스트, 보조 설명*/
+  --text-accent: #ffe9a7;; /* 키워드, 중요한 단어 강조 */
+  --text-dark: #2d2158; /* 밝은 배경에서 사용 */
+  --text-light: #ffffff; /* 어두운 배경에서 사용 */
+}
+
+/* Logo Colors */
+:root {
+  --logo-heading: #f9f9f9; /* 로고 색상 */
+}
+
+/* Accent Colors */
+:root {
+  --accent-color: #9a6fc3; /* 밑줄, 버튼 등 */
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  background-color: #4D3C8B;
+  transition: background-color 0.3s linear;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--text-heading);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  --background-color: rgba(0, 0, 0, 0);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 35px;
+  margin-right: 8px;
+}
+
+.header.logo.sitename-Lee {
+  font-size: 27px;
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-heading);
+}
+
+.scrolled .header {
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  height: 1000px;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  max-width: 400px;
+  height: auto;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Navmenu - Desktop */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-heading-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 애니메이션 효과 밑줄 */
+  .navmenu a::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #A996FF;
+    transition: width 0.4s ease;
+  }
+
+  .navmenu li:hover > a::after,
+  .navmenu .active::after {
+    width: 80%;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+    font-weight: 500;
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+}
+
+  /* Navmenu - Mobile */
+  @media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--contrast-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.hero p {
+  margin: 5px 0 50px 0;
+  font-size: 60px;
+  color: var(--text-subheading);
+}
+
+.hero p span {
+  letter-spacing: 1px;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.hero .cta-btn {
+  margin: 10px 5px;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  transition: 0.3s;
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.hero .cta-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.hero .cta-btn2 {
+  margin: 10px 5px;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 0;
+  transition: 0.3s;
+  color: var(--contrast-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero .cta-btn2:hover {
+  background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+}
+
+.dynamic-color,
+.typed,
+.typed-cursor {
+  transition: color 0.4s ease;
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--text-muted);
+  background-color: #341e4d;
+  font-size: 14px;
+  padding: 40px 0 0 0;
+  margin-top: 100px;
+  position: relative;
+}
+
+.footer .icon {
+  color: var(--accent-color);
+  margin-right: 15px;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--contrast-color);
+  border-color: var(--contrast-color);
+}
+
+.footer .messase {
+  font-size: 18px;
+  padding: 25px 0;
+  border-top: 1px solid color-mix(in srgb, var(--nav-dropdown-color), transparent 90%);
+}
+
+/*------------------------------
+# Layout - 공통 구조
+------------------------------*/
+body.about-page .header,
+body.resume-page .header {
+  background-color: #4D3C8B;
+}
+
+body.about-page,
+body.resume-page {
+  background-color: #ffffff; /* 또는 원하는 고정 배경색 */
+  color: #2d2158; /* 진한 보라 글자 색 */
+}
+
+
+.about-page main,
+.resume-page main {
+  padding-top: 100px;
+}
+
+.section-titlebox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0 60px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-heading);
+  position: relative;
+  z-index: 2;
+} /* About Me, Resume 등의 제목*/
+
+.section-subtitle {
+  font-size: 20px;
+  color: var(--text-subheading);
+} /* 보조 설명 텍스트*/
+
+/*------------------------------
+# Section Content - 소제목 & 항목
+------------------------------*/
+.section-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-em {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.section-highlight {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 12px 16px;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 4px;
+  margin: 16px 0;
+  color: var(--default-color);
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about-content h1 {
+  font-size: 20px;
+  margin-top: 25px;
+  color: var(--text-accent);
+}
+
+.about-content p {
+  color: var(--text-muted);
+}
+
+.about-content ul {
+  list-style: none;
+  padding: 0;
+  color: var(--text-body);  
+}
+
+.about-content li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about-content ul strong {
+  margin-right: 10px;
+}
+
+.about-content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color-lee);
+  line-height: 0;
+}
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills {
+  text-align: center;
+  margin: 120px 0;
+  box-sizing: border-box;
+}
+
+.skills p {
+  color: var(--text-muted);
+  margin-top: 20px;
+}
+
+.skills .progress {
+  padding-top: 50px;
+  margin-bottom: 40px;
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.skills .progress .skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  margin-bottom: 6px;
+}
+
+.skills .progress .skill .label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  overflow: visible;
+  color: var(--text-subheading);
+}
+
+.skills .skill .val {
+  color: #fde9ff;
+}
+
+
+.skills .progress .skill .skill-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.skill-icon {
+  transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.2);
+}
+
+.skills .progress-bar-wrap {
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  height: 10px;
+  border-radius: 4px;
+}
+
+.skills .progress-bar {
+  width: 0;
+  height: 10px;
+  background: linear-gradient(90deg, #6a4cc9, #a082ff);
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.tooltip-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-icon .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #f6daff;
+  color: #000;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 5;
+  bottom: 120%; /* 아이콘 위로 띄우기 */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+.tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px); /* 살짝 위로 움직임 */
+}
+
+.tooltip-icon img.skill-icon {
+  transition: transform 0.3s ease;
+}
+
+.tooltip-icon:hover img.skill-icon {
+  transform: scale(1.15);
+}
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume-block-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 30px 0 20px;
+  color: var(--heading-color);
+} /* Education, Experience 등의 소제목*/
+
+.resume-item {
+  position: relative;
+  padding: 0 0 25px 25px;
+  border-left: 2px solid var(--accent-color);
+  margin-top: 0;
+}
+
+.resume-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--default-color);
+  line-height: 1.4;
+}
+
+.resume-item h5 {
+  font-size: 15px;
+  padding: 4px 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--text-subheading);
+}
+
+.resume-item p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.resume-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.resume-item ul li {
+  padding-bottom: 8px;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -9px;
+  top: 3px;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.resume-item:last-child {
+  padding-bottom: 0;
+}

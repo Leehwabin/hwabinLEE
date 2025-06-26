@@ -1,415 +1,262 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="이화빈">
-  <meta name="keywords" name="포트폴리오, html, css, 피그마, 영상">
-  <meta name="description" name="안녕하세요! 디자인 영상 전문입니다!">
-  <meta name="robots" content="noindex,nofollow">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="keywords" content="포트폴리오, html, css, figma, video">
+  <meta name="description" name="안녕하세요! 디자인 및 영상 에디터입니다!">
+  <meta name="robots" content="noindex,nofollow">
   <title>이화빈의 포트폴리오</title>
 
   <!-- Favicons -->
-  <link href="./imges/파비콘.ico" rel="icon">
-  <link href="./imges/파비콘.ico" rel="apple-touch-icon">
+  <link href="./assets/img/icons/Favicons/파비콘.ico" rel="icon">
+  <link href="./assets/img/icons/Favicons/파비콘.ico" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="./css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="./assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="about-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-  <header id="header" class="header d-flex align-items-center dark-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="./imges/로고 흰색.ico" alt="">
-        <!-- <h1 class="sitename fleur-lee">Lee hwabin</h1> -->
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="./assets/img/icons/LOGO/로고_흰색.ico" alt="">
+        <h1 class="sitename-Lee mt-2">Lee hwabin</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" >Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" class="active">About</a></li>
+          <li><a href="./resume.html">Resume</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Figma</a></li>
+              <li><a href="#">Video</a></li>
             </ul>
-          </li> -->
-          <li><a href="contact.html">Contact</a></li>
+          </li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list-task"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <div class="header-social-links">
-        <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
-      </div>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- About Section -->
+  <main>
     <section id="about" class="about section">
+
+      <div style="height: 100px;"></div>
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>나의 소개</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="./imges/2.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>UI/UX Designer &amp; Video Editor.</h2>
-            <p class="fst-italic py-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-arrow-bar-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
-            <!-- <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-            </p> -->
-          </div>
+        <div class="section-titlebox">
+          <h2 class="section-title">About Me</h2>
         </div>
-
       </div>
+      <!-- End Section Title -->
 
-    </section><!-- /About Section -->
+      <div class="container">
+          <div class="row gy-4 justify-content-center">
+              <div class="col-lg-3 order-1 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                  <img src="./assets/img/portfolio/자기소개사진.jpg" class="img-fluid" alt="">
+              </div>
 
-    <!-- Skills Section -->
+              <div class="col-lg-9 order-2 order-lg-2 about-content" data-aos="fade-up" data-aos-delay="200">
+                  <h1>이화빈</h1>
+                  <p class="py-3">
+                    멀티미디어 기반의 UX/UI & 브랜딩 디자이너
+                  </p>
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                        <ul>
+                         <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>25 Jun 2000</span></li>
+                         <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
+                         <li><i class="bi bi-chevron-right"></i> <strong>License:</strong> <span>포토샵 1급</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <ul>
+                         <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>부산광역시 해운대구</span></li>
+                         <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>010-8906-5545</span></li>
+                         <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>hwabin2000@gmail.com</span></li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="py-3 mt-5">
+                    <p>사용자의 마음을 움직이는 디자이너 이화빈입니다.</p>
+                    <p>단순히 예쁜 화면이 아닌, 사용자의 시선과 감정을 담은 디자인을 추구하고 있습니다.</p>
+                    <p>사용자들에게 디자인과 영상을 통해 더 따뜻하고 편안한 경험을 전하고 싶습니다.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+   <!-- Skills Section -->
     <section id="skills" class="skills section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>나의 기술</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+       <div class="section-titlebox" data-aos="fade-up">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">다양한 디자인 도구와 웹 기술을 통해 아이디어를 실현합니다.</p>
+       </div>
+      <!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+      <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
         <div class="row skills-content skills-animation">
-
+           <!-- 왼쪽 열 -->
           <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">70%</i></span>
+            <div class="progress skills-animation">
+              <span class="skill">
+                <span class="label">
+                  Web Publishing
+                  <div class="tooltip-icon"> 
+                    <img src="./assets/img/icons/icon/html.png" alt="HTML" class="skill-icon">
+                    <span class="tooltip-text">HTML: 85%</span>
+                  </div>
+                  <div class="tooltip-icon">
+                    <img src="./assets/img/icons/icon/css.png" alt="CSS" class="skill-icon">
+                    <span class="tooltip-text">css: 80%</span>
+                  </div>
+                  <div class="tooltip-icon">
+                    <img src="./assets/img/icons/icon/js.png" alt="JavaScript" class="skill-icon">
+                    <span class="tooltip-text">JS: 75%</span>
+                  </div>
+                </span>
+                <i class="val">60%</i>
+              </span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">70%</i></span>
+            </div>
+            <!-- End Skills Item -->
+            <div class="progress skills-animation">
+              <span class="skill">
+                <span class="label">
+                  Graphic Design
+                  <div class="tooltip-icon"> 
+                    <img src="./assets/img/icons/icon/photoshop.png" alt="PHOTOSHOP" class="skill-icon">
+                    <span class="tooltip-text">PHOTOSHOP: 90%</span>
+                  </div>
+                  <div class="tooltip-icon">
+                    <img src="./assets/img/icons/icon/illustrator.png" alt="ILLUSTRATOR" class="skill-icon">
+                    <span class="tooltip-text">ILLUSTRATOR: 80%</span>
+                  </div>
+                </span>
+                <i class="val">85%</i>
+              </span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+            </div>
+            <!-- End Skills Item -->
           </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Figma</span> <i class="val">100%</i></span>
+          
+        <div class="col-lg-6">
+             <div class="progress skills-animation">
+              <span class="skill">
+                <span class="label">
+                  UI/UX Tool
+                  <div class="tooltip-icon"> 
+                    <img src="./assets/img/icons/icon/figma.png" alt="FIGMA" class="skill-icon">
+                    <span class="tooltip-text">FIGMA: 90%</span>
+                  </div>
+                </span>
+                <i class="val">90%</i>
+              </span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Photoshop & Illustrator</span> <i class="val">90%</i></span>
+            </div>
+            <!-- End Skills Item -->
+             <div class="progress skills-animation">
+              <span class="skill">
+                <span class="label">
+                  Video Production
+                  <div class="tooltip-icon"> 
+                    <img src="./assets/img/icons/icon/premiere-pro.png" alt="PREMIERE-PRO" class="skill-icon">
+                    <span class="tooltip-text">PREMIERE-PRO: 95%</span>
+                  </div>
+                  <div class="tooltip-icon">
+                    <img src="./assets/img/icons/icon/after-effects.png" alt="AFTER-EFFECTS" class="skill-icon">
+                    <span class="tooltip-text">AFTER-EFFECTS: 85%</span>
+                  </div>
+                </span>
+                <i class="val">90%</i>
+              </span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Premiere Pro & After Effects</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+            </div>
+            <!-- End Skills Item -->
           </div>
-
         </div>
 
       </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Facts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Workers</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
+    </section>
+    <!-- /Skills Section -->
   </main>
 
-  <footer id="footer" class="footer dark-background">
-
+  <footer id="footer" class="footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Lee hwabin</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a> -->
+      <div class="row gy-4 align-items-start">
+        <div class="col-12 col-md-6 d-flex">
+          <i class="bi bi-telephone icon me-3"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              <strong>Phone:</strong> <span>+82 010-8906-5545</span><br>
+              <strong>Email:</strong> <span>hwabin2000@gmail.com</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex justify-content-md-end justify-content-start text-md-end text-start">
+          <div>
+            <h4>Follow Us</h4>
+            <div class="social-links d-flex justify-content-start justify-content-md-end">
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div class="container messase text-center mt-4">
+      <p ><i class="bi bi-emoji-smile me-3"></i>Thank you for visiting!<i class="bi bi-emoji-smile ms-3"></i></p>
+    </div>
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
 
   <!-- Main JS File -->
-  <script src="./js/main.js"></script>
-
+  <script src="assets/js/main.js"></script>
+  
 </body>
-
 </html>
