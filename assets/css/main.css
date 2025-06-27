@@ -845,45 +845,6 @@ body.portfolio-page {
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio-section .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
-}
-
-.portfolio-section .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  margin: 0 10px 10px 10px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio-section .portfolio-filters li:hover,
-.portfolio-section .portfolio-filters li.filter-active {
-  color: var(--accent-color);
-}
-
-.portfolio-section .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio-section .portfolio-filters li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 575px) {
-  .portfolio-section .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
-
 .portfolio-section .portfolio-content {
   position: relative;
   overflow: hidden;
@@ -900,15 +861,18 @@ body.portfolio-page {
   z-index: 3;
   transition: all ease-in-out 0.3s;
   background: rgba(0, 0, 0, 0.6);
-  padding: 15px;
+  padding: 0;
 }
 
 .portfolio-section .portfolio-content .portfolio-info h4 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
   font-size: 14px;
   padding: 5px 10px;
+  margin: 0;
   font-weight: 400;
   color: #ffffff;
-  display: inline-block;
   background-color: var(--accent-color);
 }
 
@@ -951,3 +915,48 @@ body.portfolio-page {
 .portfolio-section .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
+
+.video-carousel-section {
+  margin-top: 60px;
+  padding: 40px 0;
+}
+
+.carousel-title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  color: var(--text-muted);
+}
+
+.carousel-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.video-carousel-section h5{
+  color: var(--text-muted);
+}
+
+.carousel-indicators .indicator-dot {
+  background-color: var(--contrast-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 6px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.carousel-indicators .indicator-dot.active {
+  background-color: var(--accent-color);
+  transform: scale(1.5);
+  opacity: 1;
+}
+
