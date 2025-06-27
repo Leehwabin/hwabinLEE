@@ -38,20 +38,20 @@
 /* Nav Menu Colors */
 :root {
   --nav-heading-color: #ffffff; /* 메뉴 색상 */
-  --nav-hover-color: #ffb6b6; /* 메뉴 hover 색상 */
+  --nav-hover-color: #FFD5D5; /* 메뉴 hover 색상 */
   --nav-mobile-background-color: #F9F6FF; /* 모바일 메뉴의 배경색 */
   --nav-dropdown-background-color: #F9F6FF; /* 드롭다운 메뉴의 배경색 */
-  --nav-dropdown-color: #8172a4; /* 드롭다운 메뉴 안의 글자 색상 */
+  --nav-dropdown-color: #7A6A99; /* 드롭다운 메뉴 안의 글자 색상 */
   --nav-dropdown-hover-color: #2d2158; /* 드롭다운 메뉴의 hover 색상 */
 }
 
 /* Font Colors */
 :root {
   --text-heading: #593AAD; /* 메인 타이틀용 */
-  --text-subheading: #876FFF; /* 부제목, 설명 제목 등 */
-  --text-body: #FFCFAE; /* 일반적인 문단 글 */
-  --text-muted: #bfb8d9; /* 서브 텍스트, 보조 설명*/
-  --text-accent: #ffe9a7;; /* 키워드, 중요한 단어 강조 */
+  --text-subheading: #5741a6; /* 부제목, 설명 제목 등 */
+  --text-body: #584b6f; /* 일반적인 문단 글 */
+  --text-muted: #A69FCB; /* 서브 텍스트, 보조 설명*/
+  --text-accent: #102040; /* 키워드, 중요한 단어 강조 */
   --text-dark: #2d2158; /* 밝은 배경에서 사용 */
   --text-light: #ffffff; /* 어두운 배경에서 사용 */
 }
@@ -133,13 +133,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .hero {
-  height: 1000px;
+  height: 100px;
   padding: 100px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+.welcom  {
+  color: #ffe9a7;
 }
 
 .hero-content {
@@ -485,7 +489,7 @@ h1,h2,h3,h4,h5,h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--text-muted);
-  background-color: #341e4d;
+  background-color: #1c0d2e;
   font-size: 14px;
   padding: 40px 0 0 0;
   margin-top: 100px;
@@ -500,6 +504,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .footer h4 {
+  color: var(--text-muted);
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -534,19 +539,22 @@ h1,h2,h3,h4,h5,h6 {
 # Layout - 공통 구조
 ------------------------------*/
 body.about-page .header,
-body.resume-page .header {
+body.resume-page .header,
+body.portfolio-page .header {
   background-color: #4D3C8B;
 }
 
 body.about-page,
-body.resume-page {
+body.resume-page,
+body.portfolio-page {
   background-color: #ffffff; /* 또는 원하는 고정 배경색 */
   color: #2d2158; /* 진한 보라 글자 색 */
 }
 
 
 .about-page main,
-.resume-page main {
+.resume-page main,
+.portfolio-page main{
   padding-top: 100px;
 }
 
@@ -605,7 +613,7 @@ body.resume-page {
 }
 
 .about-content p {
-  color: var(--text-muted);
+  color: var(--text-dark);
 }
 
 .about-content ul {
@@ -676,7 +684,7 @@ body.resume-page {
 }
 
 .skills .skill .val {
-  color: #fde9ff;
+  color: var(--text-muted);
 }
 
 
@@ -751,41 +759,39 @@ body.resume-page {
 # Resume Section
 --------------------------------------------------------------*/
 .resume-block-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 30px 0 20px;
-  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: var(--text-accent);
+  position: relative;
+  padding-left: 10px;
+  border-left: 4px solid var(--text-accent);
 } /* Education, Experience 등의 소제목*/
 
-.resume-item {
-  position: relative;
-  padding: 0 0 25px 25px;
-  border-left: 2px solid var(--accent-color);
-  margin-top: 0;
-}
-
 .resume-item h4 {
+  line-height: 18px;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--default-color);
-  line-height: 1.4;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
 }
 
 .resume-item h5 {
-  font-size: 15px;
-  padding: 4px 12px;
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 10px;
   color: var(--text-subheading);
 }
 
 .resume-item p {
   font-size: 15px;
-  color: var(--text-muted);
+  color: var(--text-body);
   line-height: 1.6;
 }
 
@@ -798,18 +804,150 @@ body.resume-page {
   padding-bottom: 8px;
 }
 
+.resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume-item {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  padding: 0 0 50px 50px;
+  margin-top: -2px;
+}
+
 .resume-item::before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
-  left: -9px;
-  top: 3px;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
+  top: 0;
+  left: -11px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border: 3px solid var(--accent-color);
   border-radius: 50%;
+  z-index: 2;
 }
 
-.resume-item:last-child {
-  padding-bottom: 0;
+.resume-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--accent-color);
+  z-index: 0;
+}
+
+
+
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio-section .portfolio-filters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio-section .portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  margin: 0 10px 10px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-section .portfolio-filters li:hover,
+.portfolio-section .portfolio-filters li.filter-active {
+  color: var(--accent-color);
+}
+
+.portfolio-section .portfolio-filters li:first-child {
+  margin-left: 0;
+}
+
+.portfolio-section .portfolio-filters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .portfolio-section .portfolio-filters li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+}
+
+.portfolio-section .portfolio-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-section .portfolio-content img {
+  transition: 0.3s;
+}
+
+.portfolio-section .portfolio-content .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+
+.portfolio-section .portfolio-content .portfolio-info h4 {
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+  background-color: var(--accent-color);
+}
+
+.portfolio-section .portfolio-content .portfolio-info p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio-section .portfolio-content .portfolio-info .preview-link,
+.portfolio-section .portfolio-content .portfolio-info .details-link {
+  position: absolute;
+  left: calc(50% - 40px);
+  font-size: 26px;
+  top: calc(50% - 14px);
+  color: #fff;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+
+.portfolio-section .portfolio-content .portfolio-info .preview-link:hover,
+.portfolio-section .portfolio-content .portfolio-info .details-link:hover {
+  color: var(--accent-color);
+}
+
+.portfolio-section .portfolio-content .portfolio-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.portfolio-section .portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-section .portfolio-content:hover img {
+  transform: scale(1.1);
 }
