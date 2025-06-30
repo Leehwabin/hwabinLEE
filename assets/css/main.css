@@ -24,29 +24,26 @@
   font-style: normal;
 }
 
+
 :root {
+  /* Font Families */
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Open Sans",  sans-serif;
-}
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
+  /* Brand Colors */
+  --logo-heading: #f9f9f9;
+  --accent-color: #9a6fc3; /* 밑줄, 버튼 등 */
 
-/* Nav Menu Colors */
-:root {
+  /* Nav Menu */
   --nav-heading-color: #ffffff; /* 메뉴 색상 */
   --nav-hover-color: #FFD5D5; /* 메뉴 hover 색상 */
   --nav-mobile-background-color: #F9F6FF; /* 모바일 메뉴의 배경색 */
   --nav-dropdown-background-color: #F9F6FF; /* 드롭다운 메뉴의 배경색 */
   --nav-dropdown-color: #7A6A99; /* 드롭다운 메뉴 안의 글자 색상 */
   --nav-dropdown-hover-color: #2d2158; /* 드롭다운 메뉴의 hover 색상 */
-}
 
-/* Font Colors */
-:root {
+  /* Typography Colors */
   --text-heading: #593AAD; /* 메인 타이틀용 */
   --text-subheading: #5741a6; /* 부제목, 설명 제목 등 */
   --text-body: #584b6f; /* 일반적인 문단 글 */
@@ -54,20 +51,12 @@
   --text-accent: #102040; /* 키워드, 중요한 단어 강조 */
   --text-dark: #2d2158; /* 밝은 배경에서 사용 */
   --text-light: #ffffff; /* 어두운 배경에서 사용 */
-}
 
-/* Logo Colors */
-:root {
-  --logo-heading: #f9f9f9; /* 로고 색상 */
-}
+  /* Global Colors */
+  --contrast-color: #ffffff;
+  --default-color:#000000;
 
-/* Accent Colors */
-:root {
-  --accent-color: #9a6fc3; /* 밑줄, 버튼 등 */
-}
-
-/* Smooth scroll */
-:root {
+  /* Smooth scroll */
   scroll-behavior: smooth;
 }
 
@@ -75,7 +64,6 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  background-color: #4D3C8B;
   transition: background-color 0.3s linear;
   background-attachment: fixed;
   background-size: cover;
@@ -90,7 +78,6 @@ a {
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -133,7 +120,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .hero {
-  height: 100px;
+  min-height: 80vh;
   padding: 100px 20px;
   display: flex;
   justify-content: center;
@@ -165,7 +152,7 @@ h1,h2,h3,h4,h5,h6 {
   .navmenu {
     padding: 0;
   }
-
+}
   .navmenu ul {
     margin: 0;
     padding: 0;
@@ -269,9 +256,15 @@ h1,h2,h3,h4,h5,h6 {
     top: 100%;
     visibility: visible;
   }
-}
+
 
   /* Navmenu - Mobile */
+  @media (max-width: 1199px) {
+    .navmenu a::after {
+      display: none; /* 밑줄 숨김 */
+    }
+  }
+
   @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--contrast-color);
@@ -419,7 +412,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .hero h1 {
   margin: 0;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 400;
 }
 
@@ -529,8 +522,8 @@ h1,h2,h3,h4,h5,h6 {
   border-color: var(--contrast-color);
 }
 
-.footer .messase {
-  font-size: 18px;
+.footer .message {
+  font-size: 16px;
   padding: 25px 0;
   border-top: 1px solid color-mix(in srgb, var(--nav-dropdown-color), transparent 90%);
 }
@@ -540,13 +533,15 @@ h1,h2,h3,h4,h5,h6 {
 ------------------------------*/
 body.about-page .header,
 body.resume-page .header,
-body.portfolio-page .header {
+body.portfolio-page .header,
+body.contact-page .header {
   background-color: #4D3C8B;
 }
 
 body.about-page,
 body.resume-page,
-body.portfolio-page {
+body.portfolio-page,
+body.contact-page {
   background-color: #ffffff; /* 또는 원하는 고정 배경색 */
   color: #2d2158; /* 진한 보라 글자 색 */
 }
@@ -554,7 +549,8 @@ body.portfolio-page {
 
 .about-page main,
 .resume-page main,
-.portfolio-page main{
+.portfolio-page main,
+.contact-page main {
   padding-top: 100px;
 }
 
@@ -575,6 +571,12 @@ body.portfolio-page {
   z-index: 2;
 } /* About Me, Resume 등의 제목*/
 
+@media (max-width: 768px) {
+  .section-titlebox {
+    margin: 10px 0 40px;
+  }
+}
+
 .section-subtitle {
   font-size: 20px;
   color: var(--text-subheading);
@@ -586,7 +588,7 @@ body.portfolio-page {
 .section-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 12px;
 }
 
 .section-em {
@@ -595,7 +597,7 @@ body.portfolio-page {
 }
 
 .section-highlight {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(0, 0, 0, 0.06);
   padding: 12px 16px;
   border-left: 4px solid var(--accent-color);
   border-radius: 4px;
@@ -635,8 +637,8 @@ body.portfolio-page {
 .about-content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: var(--accent-color-lee);
-  line-height: 0;
+  color: var(--accent-color);
+  vertical-align: middle;
 }
 
 /*--------------------------------------------------------------
@@ -704,7 +706,7 @@ body.portfolio-page {
 }
 
 .skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  background: color-mix(in srgb, var(--accent-color), transparent 70%);
   height: 10px;
   border-radius: 4px;
 }
@@ -774,7 +776,7 @@ body.portfolio-page {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin-bottom: 10px;
 }
 
@@ -840,8 +842,6 @@ body.portfolio-page {
   z-index: 0;
 }
 
-
-
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -878,12 +878,14 @@ body.portfolio-page {
 
 .portfolio-section .portfolio-content .portfolio-info p {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 10px;
-  left: 0;
-  right: 0;
   font-size: 16px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .portfolio-section .portfolio-content .portfolio-info .preview-link,
@@ -926,7 +928,7 @@ body.portfolio-page {
   text-align: center;
   font-weight: 600;
   margin-bottom: 50px;
-  margin-top: 100px;
+  margin-top: 20px;
   color: var(--text-muted);
 }
 
@@ -937,14 +939,36 @@ body.portfolio-page {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: 8px;
+  background-color: #fff;
 }
+
+.carousel-img-frame {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  border: 5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0) saturate(100%) invert(30%) grayscale(100%);
+  transform: scale(1.4);
+  background-size: 90% 90%;
+  width: 2rem;
+  height: 2rem;
+}
+
 
 .video-carousel-section h5{
   color: var(--text-muted);
 }
 
 .carousel-indicators .indicator-dot {
-  background-color: var(--contrast-color);
+  background-color: var(--text-muted);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -960,3 +984,188 @@ body.portfolio-page {
   opacity: 1;
 }
 
+.glightbox .gprev,
+.glightbox .gnext {
+  z-index: 9999;
+  font-size: 1.8rem;
+  width: 40px;
+  height: 40px;
+}
+
+#design-projects,
+#figma-projects,
+#video-projects {
+  scroll-margin-top: 100px;
+}
+
+.back-floating {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: transparent;
+  font-size: 2.4rem;
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .back-floating {
+    right: 16px;
+  }
+}
+
+.detail-hero,
+.detail-overview {
+  text-align: center;
+}
+
+.detail-overview ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.detail-summary-box ul {
+  line-height: 1.5;
+  font-size: 1.05rem;
+  display: inline-block;
+  text-align: left;
+  margin-top: 16px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.detail-summary-box {
+  border-left: 4px solid var(--accent-color);
+  background: #f9f9f9;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 20px 100px 24px 100px;
+  text-align: center;
+}
+
+
+.detail-gallery {
+  max-width: 960px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.detail-gallery .gallery-image img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+
+.contact .info-item + .info-item {
+  margin-top: 40px;
+  display: flex;
+}
+
+.contact .info-item i {
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.contact .info-item h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact .info-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .contact .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact .info-item i {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+/* Form Fields */
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea {
+  font-size: 14px;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  width: 100%;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+/* Buttons */
+.contact form .btn-submit,
+.contact form .btn-reset {
+  padding: 10px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin: 10px 10px 0 0;
+}
+
+/* Submit Button */
+.contact form .btn-submit {
+  background-color: var(--accent-color);
+  color: white;
+}
+.contact form .btn-submit:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+/* Reset Button */
+.contact form .btn-reset {
+  background-color: #e0e0e0;
+  color: #444;
+}
+.contact form .btn-reset:hover {
+  background-color: #cccccc;
+}

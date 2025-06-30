@@ -19,6 +19,7 @@
   <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="./assets/css/main.css" rel="stylesheet">
@@ -41,9 +42,9 @@
           <li class="dropdown">
             <a href="./portfolio.html" class="active"><span>Portfolio</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="./portfolio-design..html">Design</a></li>
-              <li><a href="./portfolio-figma.html">Figma</a></li>
-              <li><a href="./portfolio-video.html">Video</a></li>
+              <li><a href="#video-projects">Video</a></li>
+              <li><a href="#design-projects">Design</a></li>
+              <li><a href="#figma-projects">Figma</a></li>
             </ul>
           </li>
           <li><a href="./contact.html">Contact</a></li>
@@ -62,8 +63,8 @@
     </div>
 
     <!-- Video -->
-    <section class="video-carousel-section">
-      <div class="container">
+    <section id="video-projects" class="video-carousel-section">
+      <div class="container" data-aos="zoom-in" data-aos-delay="300">
         <h5 class="carousel-title">Video Projects</h5>
         <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -71,25 +72,29 @@
             <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" class="indicator-dot active" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1" class="indicator-dot" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="2" class="indicator-dot" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="3" class="indicator-dot" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="4" class="indicator-dot" aria-label="Slide 5"></button>
           </div>
 
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="assets/img/portfolio/Thumbnail/영상1.png" class="carousel-img" alt="Video 1">
+              <a href="https://www.youtube.com/watch?v=RcVbNcYov2s&rel=0&vq=hd1080" class="glightbox" data-gallery="portfolio-gallery-video" data-type="video">
+                <div class="carousel-img-frame">
+                  <img src="assets/img/portfolio/Thumbnail/영상3.png" class="carousel-img" alt="Video 1">
+                </div>
+                </a>
             </div>
             <div class="carousel-item">
-              <img src="assets/img/portfolio/Thumbnail/영상2.png" class="carousel-img" alt="Video 2">
+              <a href="https://www.youtube.com/watch?v=V2UpbTrUpt8&rel=0&vq=hd1080" class="glightbox" data-gallery="portfolio-gallery-video" data-type="video">
+                <div class="carousel-img-frame">              
+                  <img src="assets/img/portfolio/Thumbnail/영상4.png" class="carousel-img" alt="Video 2">
+                </div>
+              </a>
             </div>
             <div class="carousel-item">
-              <img src="assets/img/portfolio/Thumbnail/영상3.png" class="carousel-img" alt="Video 3">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/portfolio/Thumbnail/영상4.png" class="carousel-img" alt="Video 4">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/portfolio/Thumbnail/영상5.png" class="carousel-img" alt="Video 5">
+              <a href="https://www.youtube.com/watch?v=4vTq6rTSmHg&rel=0&vq=hd1080" class="glightbox" data-gallery="portfolio-gallery-video" data-type="video">
+                <div class="carousel-img-frame">
+                  <img src="assets/img/portfolio/Thumbnail/영상5.png" class="carousel-img" alt="Video 3">
+                </div>
+              </a>
             </div>
           </div>
           <button class="carousel-control-prev" data-bs-target="#videoCarousel" data-bs-slide="prev">
@@ -103,12 +108,12 @@
     </section>
 
     <!-- Design -->
-    <section id="portfolio" class="portfolio-section">
+    <section id="design-projects" class="portfolio-section" data-aos="fade-up" data-aos-delay="200">
       <div class="container">
         <h5 class="carousel-title">Design Projects</h5>
         <div class="portfolio-grid">
 
-          <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4">
 
             <div class="col-lg-4 col-md-6 portfolio-item">
               <div class="portfolio-content h-100">
@@ -117,7 +122,7 @@
                   <h4>Design 1</h4>
                   <p>명함</p>
                   <a href="assets/img/portfolio/Thumbnail/명함.png" title="Design 1" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -129,7 +134,7 @@
                   <h4>Design 2</h4>
                   <p>얼망고?!</p>
                   <a href="./assets/img/portfolio/Thumbnail/브랜드디자인1.png" title="Design 2" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -141,7 +146,7 @@
                   <h4>Design 3</h4>
                   <p>추억에 꼬치다</p>
                   <a href="./assets/img/portfolio/Thumbnail/브랜드디자인2.png" title="Design 3" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design3.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -153,7 +158,7 @@
                   <h4>Design 4</h4>
                   <p>공익포스터</p>
                   <a href="./assets/img/portfolio/Thumbnail/공익포스터.png" title="design 4" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design4.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -165,7 +170,7 @@
                   <h4>Design 5</h4>
                   <p>행사포스터</p>
                   <a href="./assets/img/portfolio/Thumbnail/행사포스터.png" title="design 5" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design5.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -177,7 +182,7 @@
                   <h4>Design 6</h4>
                   <p>카드뉴스</p>
                   <a href="./assets/img/portfolio/Thumbnail/카드뉴스.png" title="design 6" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design6.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -189,7 +194,7 @@
                   <h4>Design 7</h4>
                   <p>빵글빵글 리플렛</p>
                   <a href="./assets/img/portfolio/Thumbnail/리플렛.png" title="design 7" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design7.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -201,10 +206,24 @@
                   <h4>Design 8</h4>
                   <p>제품홍보</p>
                   <a href="./assets/img/portfolio/Thumbnail/제품홍보.png" title="design 9" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-design8.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
+            
+          </div><!-- End Portfolio Container -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Figma -->
+    <section id="figma-projects" class="portfolio-section">
+      <div class="container" data-aos="fade-up" data-aos-delay="200">
+        <h5 class="carousel-title">Figma Projects</h5>
+        <div class="portfolio-grid">
+
+          <div class="row gy-4">
 
             <div class="col-lg-4 col-md-6 portfolio-item">
               <div class="portfolio-content h-100">
@@ -213,7 +232,7 @@
                   <h4>Figma 1</h4>
                   <p>모션박스</p>
                   <a href="./assets/img/portfolio/Thumbnail/APP.png" title="figma 1" data-gallery="portfolio-gallery-figma" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./portfolio-figma1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -224,20 +243,8 @@
                 <div class="portfolio-info">
                   <h4>Figma 2</h4>
                   <p>홈페이지</p>
-                  <a href="./assets/img/portfolio/Thumbnail/APP.png" title="figma 1" data-gallery="portfolio-gallery-figma" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item">
-              <div class="portfolio-content h-100">
-                <img src="./assets/img/portfolio/Thumbnail/APP.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Vedio</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="./assets/img/portfolio/Thumbnail/APP.png" title="video 1" data-gallery="portfolio-gallery-video" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="./assets/img/portfolio/Thumbnail/APP.png" title="figma 2" data-gallery="portfolio-gallery-figma" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="./portfolio-figma2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -246,7 +253,7 @@
 
         </div>
       </div>
-    </section>
+    </section>    
   </main>
 
   <footer id="footer" class="footer">
@@ -274,7 +281,7 @@
       </div>
     </div>
 
-    <div class="container messase text-center mt-4">
+    <div class="container message text-center mt-4">
       <p ><i class="bi bi-emoji-smile me-3"></i>Thank you for visiting!<i class="bi bi-emoji-smile ms-3"></i></p>
     </div>
   </footer>
@@ -284,13 +291,8 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

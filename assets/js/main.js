@@ -178,3 +178,30 @@ if (mobileNavToggleBtn) {
       e.stopImmediatePropagation();
     });
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  });
+
+  /**
+   * contact massage
+   */
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const sentMessage = document.querySelector(".sent-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); 
+
+      sentMessage.style.display = "block";
+
+      setTimeout(() => {
+        sentMessage.style.display = "none";
+        form.reset();
+      }, 3000);
+    });
+  });
