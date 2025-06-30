@@ -484,48 +484,26 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--text-muted);
   background-color: #1c0d2e;
   font-size: 14px;
-  padding: 40px 0 0 0;
-  margin-top: 100px;
+  padding: 20px;
+  margin-top: 60px;
   position: relative;
-}
-
-.footer .icon {
-  color: var(--accent-color);
-  margin-right: 15px;
-  font-size: 24px;
-  line-height: 0;
-}
-
-.footer h4 {
-  color: var(--text-muted);
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.footer .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  margin-right: 10px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  color: var(--contrast-color);
-  border-color: var(--contrast-color);
 }
 
 .footer .message {
   font-size: 16px;
-  padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--nav-dropdown-color), transparent 90%);
+  padding: 20px 0;
+}
+
+.footer i {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .footer .message {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+  }
 }
 
 /*------------------------------
