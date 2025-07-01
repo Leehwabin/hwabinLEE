@@ -1094,6 +1094,10 @@ body.contact-page {
   display: inline-block;
 }
 
+.figma-preview {
+  margin: 100px;
+}
+
 .btn-custom {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
