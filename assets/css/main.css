@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Markazi+Text:wght@400..700&family=Mrs+Saint+Delafield&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Markazi+Text:wght@400..700&family=Mrs+Saint+Delafield&family=Nanum+Brush+Script&display=swap');
 
 .sitename-Lee {
   font-family: "Mrs Saint Delafield", cursive;
@@ -20,6 +20,12 @@
 .markazi-Lee {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nanum-brush-Lee {
+  font-family: "Nanum Brush Script", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -749,6 +755,11 @@ body.contact-page {
   border-left: 4px solid var(--text-accent);
 } /* Education, Experience 등의 소제목*/
 
+.section-subtitle.nanum-brush-Lee {
+  color: var(--text-muted);
+  font-size: 28px;
+}
+
 .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
@@ -819,6 +830,41 @@ body.contact-page {
   background-color: var(--accent-color);
   z-index: 0;
 }
+
+.icon-link {
+  margin-left: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.icon-link.instagram::before {
+  content: "\f437";
+  font-family: "Bootstrap Icons";
+  color: #E1306C;
+}
+
+.icon-link.youtube::before {
+  content: "\f62b";
+  font-family: "Bootstrap Icons";
+  color: #FF0000;
+}
+
+.resume-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-item li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -1046,6 +1092,22 @@ body.contact-page {
   max-width: 100%;
   height: auto;
   display: inline-block;
+}
+
+.btn-custom {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
 }
 
 /*--------------------------------------------------------------
