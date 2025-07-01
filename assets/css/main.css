@@ -850,7 +850,6 @@ body.contact-page {
 }
 
 
-/* 큰 화면: h4와 아이콘이 나란히 */
 .title-row {
   display: flex;
   align-items: center;
@@ -875,7 +874,6 @@ body.contact-page {
   text-decoration: none;
 }
 
-/* 작은 화면: h4 아래로 아이콘 내려오기 */
 @media (max-width: 576px) {
   .title-row {
     flex-direction: column;
